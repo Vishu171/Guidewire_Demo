@@ -103,7 +103,7 @@ if authenticate_user():
           **Some Sample Questions:**
       
           - What is the net income of MRVL in 2022?
-          - What are the total current assets of MRVL  in last 3 years?
+          - What are the Dividends paid for MRVL in last 3 years?
         
         
         """)
