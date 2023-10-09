@@ -103,7 +103,7 @@ if authenticate_user():
           **Some Sample Questions:**
       
           - What is the net income of MRVL in 2022?
-          - What is the total depreciation for MRVL in last 2 years?
+          - What is the gross profit of MRVL in last 3 years?
         
         
         """)
