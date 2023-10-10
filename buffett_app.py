@@ -139,10 +139,10 @@ if authenticate_user():
 
             try:
                 output = fs_chain(str_input)
+                st.write(output['result'])
                 try:
                     # if the output doesn't work we will try one additional attempt to fix it
                     query_result = sf_query(output['result'])
-                    st.write(query_result)
                     if len(query_result) >= 1:
                       with st.chat_message("assistant"):
                         df_2 = pd.DataFrame(query_result)
