@@ -16,7 +16,7 @@ If you don't know the answer, provide what you think the sql should be but do no
 As an example, a user will ask "Display the last 5 years of net income.?" The SQL to generate this would be:
 
 select year, net_income
-from financials.prod.income_statement_annual
+from financials.marvell_prod.income_statement_annual
 where ticker = 'TICKER'
 order by year desc
 limit 5;
