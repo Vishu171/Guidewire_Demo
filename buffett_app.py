@@ -159,8 +159,8 @@ if authenticate_user():
                          st.markdown(tabulate(df_2, tablefmt="html",headers=headers,showindex=False), unsafe_allow_html = True) 
                         if len(df_2.index) >2 & len(df_2.columns) == 2:
                             title_name = df_2.columns[0]+'-'+df_2.columns[1]
-                            with col2:
-                             plot_financials(df_2,df_2.columns[0],df_2.columns[1], cutoff,title_name)
+                            #with col2:
+                             #plot_financials(df_2,df_2.columns[0],df_2.columns[1], cutoff,title_name)
                       #st.session_state.messages.append({"role": "assistant", "content": tabulate(df_2, tablefmt="html",headers=headers,showindex=False)})
                         st.session_state.messages.append({"role": "assistant", "content": df_2.to_csv(sep=',', index=False)})
                         
