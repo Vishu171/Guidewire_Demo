@@ -103,8 +103,8 @@ if authenticate_user():
       
           **Some Sample Questions:**
       
-          - What is the net income of MRVL in 2022?
-          - What is the gross profit of MRVL in last 3 years?
+          - What is the net income of Marvell in 2022?
+          - What is the gross profit in last 3 years?
         
         
         """)
