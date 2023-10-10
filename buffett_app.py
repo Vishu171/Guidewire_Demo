@@ -164,6 +164,7 @@ if authenticate_user():
                             title_name = df_2.columns[0]+'-'+df_2.columns[1]
                             with col2:
                              plot_financials(df_2,df_2.columns[0],df_2.columns[1], cutoff,title_name)
+                             st.write(df_2)
                       #st.session_state.messages.append({"role": "assistant", "content": tabulate(df_2, tablefmt="html",headers=headers,showindex=False)})
                         st.session_state.messages.append({"role": "assistant", "content": df_2.to_csv(sep=',', index=False)})
                         
