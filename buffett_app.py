@@ -162,6 +162,7 @@ if authenticate_user():
                              plot_financials(df_2,df_2.columns[0],df_2.columns[1], cutoff,title_name)
                       #st.session_state.messages.append({"role": "assistant", "content": tabulate(df_2, tablefmt="html",headers=headers,showindex=False)})
                         st.session_state.messages.append({"role": "assistant", "content": df_2.to_csv(sep=',', index=False)})
+                        st.write(query_result)
                     else:
                       with st.chat_message("assistant"):
                         st.write("Please try to improve your question. Note this tab is for financial statement questions. Use Tab 2 to ask from Annual Reports .")
