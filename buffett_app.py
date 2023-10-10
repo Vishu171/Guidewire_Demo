@@ -36,7 +36,8 @@ def plot_financials(df_2, x, y, x_cutoff, title):
         y=y
         ).properties(title=title)
     ) 
-  """  
+  """ 
+    df_2 = pd.DataFrame(df_2)
     df_subset = df_2.head(x_cutoff)
     # Create a bar chart using st.bar_chart()
 
