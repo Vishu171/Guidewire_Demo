@@ -27,7 +27,7 @@ except:
 # adding this to test out caching
 st.cache_data(ttl=86400)
 
-def plot_financials(df_data, x, y, x_cutoff, title):
+def plot_financials(df_2, x, y, x_cutoff, title):
     """"
     helper to plot the altair financial charts
     
