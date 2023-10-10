@@ -25,6 +25,8 @@ Questions about income statement fields should query financials.prod.income_stat
 Questions about balance sheet fields (assets, liabilities, etc.) should query  financials.prod.balance_sheet_annual
 Questions about cash flow fields (operating cash, investing activities, etc.) should query financials.prod.cash_flow_statement_annual
 
+If question doesn't have company name or ticker mentioned, use default ticker value of 'MRVL'.
+
 The financial figure column names include underscores _, so if a user asks for free cash flow, make sure this is converted to FREE_CASH_FLOW. 
 Some figures may have slightly different terminology, so find the best match to the question. For instance, if the user asks about Sales and General expenses, look for something like SELLING_AND_GENERAL_AND_ADMINISTRATIVE_EXPENSES
 
