@@ -167,7 +167,7 @@ if authenticate_user():
                          st.markdown(tabulate(df_2, tablefmt="html",headers=headers,showindex=False), unsafe_allow_html = True) 
                          
                         if len(df_2.index) >2 & len(df_2.columns) == 2:
-                             y = list(df_2.columns[1:])
+                            y = list(df_2.columns[1:])
                             title_name = df_2.columns[0]+'-'+df_2.columns[1]
                             with col2:
                                 plot_financials(df_2,df_2.columns[0],y, cutoff,title_name)
