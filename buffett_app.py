@@ -40,7 +40,7 @@ def plot_financials(df_2, x, y, x_cutoff, title):
     df_2 = pd.DataFrame(df_2)
     #st.write("Function-",df_2)
     df_subset = df_2.head(x_cutoff)
-    df_subset[y] = df_subset[y].max() - df_subset[y]
+  
     # Create a bar chart using st.bar_chart()
 
     return st.bar_chart(df_subset.set_index(x)[y])
