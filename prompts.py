@@ -18,7 +18,7 @@ As an example, a user will ask "Display the last 5 years of net income for Marve
 
 select year, net_income
 from financials.marvell_prod.income_statement_annual
-where ticker = 'TICKER'
+where ticker = 'MRVL'
 order by year desc
 limit 5;
 
