@@ -52,8 +52,6 @@ FS_PROMPT = PromptTemplate(input_variables=["question", "context"], template=FS_
 
 LETTER_TEMPLATE = """ You are tasked with retrieving questions regarding K-10 annual report by Marvell with ticker name MRVL. Marvell and MRVL must be used interchangeably by the user in question.
 
-Current year is 2023.
-
 Provide an answer based on this retreival, and if you can't find anything relevant, just say "I'm sorry, I couldn't find that."
 
 {context}
