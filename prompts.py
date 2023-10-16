@@ -54,7 +54,7 @@ LETTER_TEMPLATE = """ You are tasked with retrieving questions regarding K-10 an
 
 Current year is 2023.
 
-Hence, previous year should be treated as 2022. While previous years should be considered from year 2019 to 2022. 
+
 
 Provide an answer based on this retreival, and if you can't find anything relevant, just say "I'm sorry, I couldn't find that."
 
