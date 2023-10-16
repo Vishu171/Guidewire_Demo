@@ -43,7 +43,7 @@ def plot_financials(df_2, x, y, x_cutoff, title):
   
     # Create a bar chart using st.bar_chart()
 
-    return st.bar_chart(data=df_subset.set_index(x),x=None, y=None, color=None,width=0, height=250, use_container_width=True)
+    return st.bar_chart(data=df_subset.set_index(x),x=None, y=None, color=None,width=0, height=230, use_container_width=True)
 
     
 def fs_chain(str_input):
