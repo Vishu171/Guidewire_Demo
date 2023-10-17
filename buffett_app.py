@@ -43,7 +43,7 @@ def plot_financials(df_2, x, y, x_cutoff, title):
   
     # Create a bar chart using st.bar_chart()
 
-    return st.bar_chart(data=df_subset.set_index(x),x=None, y=None, color=None,width=0, height=230, use_container_width=True)
+    return st.bar_chart(data=df,x=df.columns[0], y=df.columns[1:], color=None,width=0, height=300, use_container_width=True) 
 
     
 def fs_chain(str_input):
@@ -141,7 +141,14 @@ if authenticate_user():
                         y = list(df_data.columns[1:])
                         title_name = df_data.columns[0]+'-'+df_data.columns[1]
                         with col2:
-                            plot_financials(df_data,df_data.columns[0],y, cutoff,title_name)
+                                grph_ser_val_x1  = df_data.iloc[:,0]
+                                grph_ser_val_y1  = df_data.iloc[:,1].apply(lambda x : float(x.replace(',','')))
+                                frame = {df_data.columns[0] : grph_ser_val_x,
+                                         df_data.columns[1] : grph_ser_val_y}
+                                df_final1 = pd.DataFrame(frame)
+                                plot_financials(df_final1,df_data.columns[0],df_data.columns[1], cutoff,title_name)
+
+                            
         
         if prompt := str_input:
             st.chat_message("user").markdown(prompt, unsafe_allow_html = True)
@@ -173,7 +180,13 @@ if authenticate_user():
                             y = list(df_2.columns[1:])
                             title_name = df_2.columns[0]+'-'+df_2.columns[1]
                             with col2:
-                                plot_financials(df_2,df_2.columns[0],y, cutoff,title_name)
+                                grph_ser_val_x  = df_2.iloc[:,0]
+                                grph_ser_val_y  = df_2.iloc[:,1].apply(lambda x : float(x.replace(',','')))
+                                frame = {df_2.columns[0] : grph_ser_val_x,
+                                         df_2.columns[1] : grph_ser_val_y}
+                                df_final = pd.DataFrame(frame)
+                                plot_financials(df_final, df_2.columns[0],df_2.columns[1], cutoff,title_name)
+                               
                              #st.write(df_2)
                       #st.session_state.messages.append({"role": "assistant", "content": tabulate(df_2, tablefmt="html",headers=headers,showindex=False)})
                         st.session_state.messages.append({"role": "assistant", "content": df_2.to_csv(sep=',', index=False)})
