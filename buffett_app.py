@@ -108,7 +108,7 @@ if authenticate_user():
         AI assisted solution to extract information from your company's financial data like balance sheet, income statements, etc spanning across 2019 to 2022. Post your queries in the textbox at bottom of this page.
           
       
-          **Some Sample Questions:**
+          **Few sample queries for reference are:**
       
           - What is the net income of Marvell in 2022?
           - What is the gross profit in last 3 years?
