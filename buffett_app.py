@@ -95,14 +95,14 @@ if authenticate_user():
       image = st.image('assets/jadefingeniusnewlogo.png',width=290)
       selected = option_menu( menu_title="Explore",
       menu_icon = "search",
-      options=["Company Statements", 'Annual Reports'], 
+      options=["Finance Data", 'Annual Reports'], 
       icons=['database', 'filetype-pdf'],  
       default_index=0,
       styles={#"container":{"font-family": "Garamond"},
         "nav-link": {"font-family": "Source Sans Pro"},"font-size": "12px", "text-align": "left", "margin":"0px", "--hover-color": "grey"})
       #styles={"container":{"font-family": "Garamond"},
         #"nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "grey"}})
-    if selected =='Company Statements':
+    if selected =='Finance Data':
         str_input = st.chat_input("Enter your question:")
         st.markdown("""
         AI assisted solution to extract information from your company's financial data like balance sheet, income statements, etc spanning across 2019 to 2022. Post your queries in the textbox at bottom of this page.
