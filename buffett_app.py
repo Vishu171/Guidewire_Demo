@@ -208,7 +208,7 @@ if authenticate_user():
         query = st.chat_input("Enter your question:")
         st.markdown("""
 
-        I am capable of reviewing the annual reports from 2019 to 2022. Please ask me questions and I will try my level best to provide accurate responses
+        AI assisted solution to extract information from your company's financial data like balance sheet, income statements, etc spanning across 2019 to 2022. Post your queries in the textbox at bottom of this page.
               
         **Some Sample Questions:**
       
