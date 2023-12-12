@@ -163,12 +163,7 @@ if authenticate_user():
                     if len(query_result) >= 1:
                       with st.chat_message("assistant"):
                         df_2 = pd.DataFrame(query_result)
-                        for name in df_2.columns:
-                            if name in column_list:
-                                new_name = f"{name} ($ thousands)"
-                                df_2.rename(columns={name : new_name}, inplace=True)
-                        
-                            #st.bar_chart(df_2) 
+
                         col1, col2 = st.columns(2)
                         df_2.columns = df_2.columns.str.replace('_', ' ')
                         headers = df_2.columns
