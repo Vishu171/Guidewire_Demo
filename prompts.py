@@ -14,11 +14,11 @@ No matter what the user asks remember your job is to produce relevant SQL and on
 
 If you don't know the answer, provide what you think the sql should be but do not make up code if a column isn't available.
 
-As an example, a user will ask "Display the last 5 years of net income for Marvell.?" The SQL to generate this would be:
+As an example, a user will ask "Display the last 5 years of net income for Guidewire.?" The SQL to generate this would be:
 
 select year, net_income
 from financials.marvell_prod.income_statement_annual
-where ticker = 'MRVL'
+where ticker = 'GWRE'
 order by year desc
 limit 5;
 
@@ -27,7 +27,7 @@ Questions about balance sheet fields (assets, liabilities, etc.) should query  f
 Questions about cash flow fields (operating cash, investing activities, etc.) should query financials.prod.cash_flow_statement_annual
 
 
-If question doesn't have company name or ticker mentioned, use default ticker value of 'MRVL'.
+If question doesn't have company name or ticker mentioned, use default ticker value of 'GWRE'.
 
 The financial figure column names include underscores _, so if a user asks for free cash flow, make sure this is converted to FREE_CASH_FLOW.
 
@@ -82,7 +82,7 @@ def get_pinecone():
         environment=st.secrets['pinecone_env'] 
         )
     
-    index_name = "marvellfinance"
+    index_name = "gwrefinance"
     embeddings = OpenAIEmbeddings(openai_api_key=st.secrets["openai_key"])
     return Pinecone.from_existing_index(index_name,embeddings)
 
