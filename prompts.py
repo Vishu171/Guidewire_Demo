@@ -17,7 +17,7 @@ If you don't know the answer, provide what you think the sql should be but do no
 As an example, a user will ask "Display the last 5 years of net income for Guidewire.?" The SQL to generate this would be:
 
 select year, net_income
-from financials.marvell_prod.income_statement_annual
+from financials.gwre_prod.income_statement_annual
 where ticker = 'GWRE'
 order by year desc
 limit 5;
@@ -50,7 +50,7 @@ SQL: ```sql ``` \n
 
 FS_PROMPT = PromptTemplate(input_variables=["question", "context"], template=FS_TEMPLATE, )
 
-LETTER_TEMPLATE = """ You are tasked with retrieving questions regarding K-10 annual report by Marvell with ticker name GWRE. Guidewire and GWRE must be used interchangeably by the user in question.
+LETTER_TEMPLATE = """ You are tasked with retrieving questions regarding K-10 annual report by Guidewire with ticker name GWRE. Guidewire and GWRE must be used interchangeably by the user in question.
 
 Provide an answer based on this retreival, and if you can't find anything relevant, just say "I'm sorry, I couldn't find that."
 
