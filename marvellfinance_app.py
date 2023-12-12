@@ -91,8 +91,8 @@ def authenticate_user():
 
 if authenticate_user():
     with st.sidebar:
-      image = Image.open("assets/jadeai.png")
-      image = st.image('assets/jadeai.png',width=290)
+      image = Image.open("assets/jadefinai.png")
+      image = st.image('assets/jadefinai.png',width=290)
       selected = option_menu( menu_title="Menu",
       menu_icon = "search",
       options=['Finance Data', 'Annual Reports'], 
