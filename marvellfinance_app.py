@@ -110,7 +110,7 @@ if authenticate_user():
       
           **Few sample queries for reference are:**
       
-          - What is the net income of Marvell in 2022?
+          - What is the net income of Guidewire in 2022?
           - What is the gross profit in last 3 years?
         
         
@@ -213,8 +213,8 @@ if authenticate_user():
               
         **Few sample queries for reference are:**
       
-        - What are the operating expenses of the Marvell for last 2 years?
-        - What are the risks Marvell is facing?
+        - What are the operating expenses of the Guidewire for last 2 years?
+        - What are the risks Guidewire is facing?
         
         """)
         
