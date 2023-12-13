@@ -138,7 +138,7 @@ if authenticate_user():
                     st.markdown(tabulate(df_data, tablefmt="html",headers=headers,showindex=False), unsafe_allow_html = True)
                     #st.write(df_str)
                     
-                    if len(df_data.index) >2 & len(df_data.columns) == 2:
+                    if len(df_data.index) >=2 & len(df_data.columns) == 2:
                         y = list(df_data.columns[1:])
                         title_name = df_data.columns[0]+'-'+df_data.columns[1]
                         with col2:
