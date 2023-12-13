@@ -199,7 +199,12 @@ if authenticate_user():
                 except Exception as error: 
                       #st.session_state.messages.append({"role": "assistant", "content": "The first attempt didn't pull what you were needing. Trying again..."})
                       output = fs_chain(f'You need to fix the code but ONLY produce SQL code output. If the question is complex, consider using one or more CTE. Examine the DDL statements and answer this question: {output}')
-                      st.write(sf_query(output['result']))
+                      with st.expander("The SQL query used for above question is:"):
+                          st.write(output['result'])
+                      query_result = sf_query(output['result'])
+                      df_2 = pd.DataFrame(query_result)
+                      st.markdown(tabulate(df_2, tablefmt="html",headers=headers,showindex=False), unsafe_allow_html = True) 
+                      
             except Exception as error:
               with st.chat_message("assistant"):
                 st.markdown("Please try to improve your question. Note this tab is for financial statement questions. Use Tab 2 to ask from Annual Reports .")
