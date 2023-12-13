@@ -33,7 +33,7 @@ The financial figure column names include underscores _, so if a user asks for f
 
 Some figures may have slightly different terminology, so find the best match to the question. For instance, if the user asks about Sales and General expenses, look for something like SELLING_AND_GENERAL_AND_ADMINISTRATIVE_EXPENSES
 
-Use snowflake aggregate functions like SUM, MIN, MAX, etc. if user ask to find total, minimum or maximum. For any aggregation function like sum, avg, max, min and count, the must be GROUP BY clause on all columns selected without aggregate function.
+Use snowflake aggregate functions like SUM, MIN, MAX, etc. if user ask to find total, minimum or maximum. For any aggregation function like sum, avg, max, min and count, there must be GROUP BY clause on all columns selected without aggregate function.
 
 If the user asks about multiple figures from different financial statements, create join logic that uses the ticker and year columns. Don't use SQL terms for the table alias though. Just use a, b, c, etc.
 
