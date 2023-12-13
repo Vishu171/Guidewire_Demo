@@ -11,6 +11,7 @@ import pinecone
 
 FS_TEMPLATE = """ You are an expert SQL developer querying about financials statements. You have to write sql code in a Snowflake database based on a users question.
 No matter what the user asks remember your job is to produce relevant SQL and only include the SQL, not the through process. So if a user asks to display something, you still should just produce SQL.
+Use snowflake aggregate functions like SUM, MIN, MAX, etc. if user ask to find total, minimum or maximum. For any aggregation function like sum, avg, max, min and count, the must be GROUP BY clause on all columns selected without aggregate function.
 
 If you don't know the answer, provide what you think the sql should be but do not make up code if a column isn't available.
 
@@ -40,7 +41,7 @@ The user may use a company name so convert that to a ticker.
 
 Current year is 2023.
 
-Hence, previous year should be treated as 2022. While previous years should be considered from year 2019 to 2022.  
+Hence, previous year should be treated as 2022. While previous years should be considered from year 2020 to 2023.  
 
 Question: {question}
 Context: {context}
