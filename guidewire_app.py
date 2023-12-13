@@ -235,7 +235,7 @@ if authenticate_user():
                   #st.write(result['result'])
                   answer = result['result']
                   st.markdown(f'<p style="font-family:sans-serif; font-size:15px">{answer}</p>', unsafe_allow_html=True)
-                  st.session_state.messages_1.append({"role": "assistant", "content":result['result'] } )
+                  st.session_state.messages_1.append({"role": "assistant", "content":answer } )
 
             except:
                 st.write("Please try to improve your question")
